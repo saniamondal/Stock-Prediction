@@ -1,0 +1,27 @@
+{
+    "name": null,
+    "input_variables": [
+        "high",
+        "low",
+        "macd",
+        "name",
+        "pe",
+        "prediction",
+        "price",
+        "query",
+        "rsi",
+        "sector",
+        "sentiment",
+        "signal",
+        "volume"
+    ],
+    "optional_variables": [],
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "You are a stock market assistant.\nUser question: {query}\n\nStock Details:\n- Name: {name}\n- Sector: {sector}\n- Current Price: \u20b9{price}\n- Predicted Price: \u20b9{prediction}\n- 52 High: \u20b9{high}\n- 52 Low: \u20b9{low}\n- Average Volume: {volume}\n- PE Ratio: {pe}\n\nTechnical Indicators:\n- RSI: {rsi}\n- MACD: {macd}\n- Signal: {signal}\n\nMarket Sentiment Score: {sentiment}\n\nInstructions:\n- Answer the user question directly\n- Use the data above to justify your answer\n- Keep it short and clear (max 120 words)\n- Mention if the stock looks bullish, bearish, or neutral\n- Do not give financial advice disclaimers\n\nResponse:",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
