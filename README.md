@@ -13,6 +13,7 @@ Uses an LLM (LangChain + HuggingFace) to explain insights
 Displays results in an interactive Streamlit dashboard
 
 🧠 System Workflow
+
 User Input (Ticker + Query)
         │
         ▼
