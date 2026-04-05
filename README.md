@@ -13,45 +13,10 @@ Uses an LLM (LangChain + HuggingFace) to explain insights
 Displays results in an interactive Streamlit dashboard
 
 🧠 System Workflow
+
+
 <img width="333" height="465" alt="image" src="https://github.com/user-attachments/assets/361257ba-3b77-4962-a678-0d12c2e09a71" />
 
-
-        ┌──────────────────────────┐
-        │        User Input        │
-        │ (Ticker + Question)      │
-        └────────────┬─────────────┘
-                     │
-                     ▼
-        ┌──────────────────────────┐
-        │   Data Fetch Layer       │
-        │     (yfinance API)       │
-        └────────────┬─────────────┘
-                     │
-                     ▼
-        ┌──────────────────────────┐
-        │  Feature Engineering     │
-        │  (Technical Indicators)  │
-        └────────────┬─────────────┘
-                     │
-        ┌────────────┼────────────┐
-        ▼            ▼            ▼
-┌────────────┐ ┌────────────┐ ┌──────────────┐
-│   LSTM     │ │  Signals   │ │   News +     │
-│ Prediction │ │ Generator  │ │  Sentiment   │
-└─────┬──────┘ └─────┬──────┘ └──────┬───────┘
-      │              │               │
-      └──────┬───────┴───────┬───────┘
-             ▼               ▼
-        ┌──────────────────────────┐
-        │     LLM Reasoning        │
-        │ (LangChain + HF Model)   │
-        └────────────┬─────────────┘
-                     │
-                     ▼
-        ┌───────────────────────────┐
-        │   Streamlit Dashboard     │
-        │   (Plotly Visuals)        │
-        └───────────────────────────┘
 
 ⚙️ Core Components
 1. Data Layer - Uses yfinance to fetch OHLCV stock data.
